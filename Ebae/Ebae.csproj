@@ -208,6 +208,8 @@
     <Content Include="materialize\js\materialize.js" />
     <Content Include="materialize\js\materialize.min.js" />
     <Content Include="mongocrypt.dll" />
+    <Content Include="public\css\style.css" />
+    <Content Include="public\js\index.js" />
     <Content Include="T&amp;C.aspx" />
     <Content Include="user\Login.aspx" />
     <Content Include="user\Register.aspx" />
