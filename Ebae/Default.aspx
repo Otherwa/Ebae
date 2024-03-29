@@ -34,10 +34,10 @@
                 </li>
             </ul>
             <ul id="dropdown1" class="dropdown-content">
-                <li><a href="#!">Login</a></li>
-                <li><a href="#!">Register</a></li>
+                <li><a href="./user/Login.aspx">Login</a></li>
+                <li><a href="./user/Register.aspx">Register</a></li>
                 <li class="divider"></li>
-                <li><a href="#!">T&C</a></li>
+                <li><a href="./Terms.aspx">T&C</a></li>
             </ul>
         </div>
     </nav>
