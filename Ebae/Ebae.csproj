@@ -208,9 +208,12 @@
     <Content Include="materialize\js\materialize.js" />
     <Content Include="materialize\js\materialize.min.js" />
     <Content Include="mongocrypt.dll" />
+    <Content Include="public\assets\drone.png" />
     <Content Include="public\css\style.css" />
+    <Content Include="public\css\TC.css" />
     <Content Include="public\js\index.js" />
-    <Content Include="T&amp;C.aspx" />
+    <Content Include="public\js\TC.js" />
+    <Content Include="TC.aspx" />
     <Content Include="user\Login.aspx" />
     <Content Include="user\Register.aspx" />
     <Content Include="Web.config" />
@@ -233,12 +236,12 @@
     </Compile>
     <Compile Include="model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="T&amp;C.aspx.cs">
-      <DependentUpon>T&amp;C.aspx</DependentUpon>
+    <Compile Include="TC.aspx.cs">
+      <DependentUpon>TC.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="T&amp;C.aspx.designer.cs">
-      <DependentUpon>T&amp;C.aspx</DependentUpon>
+    <Compile Include="TC.aspx.designer.cs">
+      <DependentUpon>TC.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
