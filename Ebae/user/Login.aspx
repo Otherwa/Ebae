@@ -21,6 +21,8 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    
+
     <!--Custom Styles-->
     <link href="../public/css/style.css" rel="stylesheet" />
 
@@ -46,7 +48,7 @@
                             <li>
                                 <div class="user-view">
                                     <div class="background">
-                                        <img src="https://i.pinimg.com/originals/77/44/80/7744806c7e15d502830a1fdd8e2a37e9.gif">
+                                        <img src="https://i.pinimg.com/originals/77/44/80/7744806c7e15d502830a1fdd8e2a37e9.gif"/>
                                     </div>
                                     <h1 class="myFont">Ebae
                                     </h1>
@@ -79,13 +81,26 @@
             </div>
 
             <div class="row">
-                <h1>Login</h1>
+                
                 <div class="row">
                     <div class="col s12 m5">
                         <div class="card-panel teal">
-                            <span class="white-text">I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
-                            </span>
+                            <form id="form1" runat="server">
+                                <div>
+                                    <h2>Login</h2>
+                                    <div>
+                                        <asp:Label ID="Label1" runat="server" Text="Username"></asp:Label>
+                                        <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
+                                    </div>
+                                    <div>
+                                        <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
+                                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
+                                    </div>
+                                    <div>
+                                        <asp:Button ID="btnLogin" runat="server" Text="Login"  CssClass="btn btn-primary"  />
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
