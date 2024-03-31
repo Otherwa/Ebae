@@ -5,7 +5,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Ebae
+    <title>Ebaeee
     </title>
     <!--Import Google Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,87 +26,109 @@
 
 </head>
 
-<body>
+<body class="body-wrapper">
 
-    <!--NavBar-->
-    <nav>
-        <div class="nav-wrapper">
-            <nav>
-                <div class="nav-wrapper">
-                    <a href="./" class="brand-logo myFont" style="padding-left: 1.25rem;">Ebae</a>
-                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                    <ul class="right hide-on-med-and-down">
-                        <li><a href="./user/Login.aspx">Login</a></li>
-                        <li><a href="./user/Register.aspx"><i class="material-icons">person_add</i></a></li>
-                        <li><a href="./About.aspx"><i class="material-icons">info</i></a></li>
-                    </ul>
-                    <ul class="side-nav" id="mobile-demo">
-                        <li>
-                            <div class="user-view">
-                                <div class="background">
-                                    <img src="https://i.pinimg.com/originals/77/44/80/7744806c7e15d502830a1fdd8e2a37e9.gif">
+    <div class="body-wrapper-content">
+        <!--NavBar-->
+        <nav class="nav">
+            <div class="nav-wrapper">
+                <nav class="pink lighten-5 nav">
+                    <div class="nav-wrapper">
+                        <a href="./" class="brand-logo myFont" style="padding-left: 1.25rem;">Ebaeee</a>
+                        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="./user/Login.aspx">Login</a></li>
+                            <li><a href="./user/Register.aspx"><i class="material-icons">person_add</i></a></li>
+                            <li><a href="./About.aspx"><i class="material-icons">info</i></a></li>
+                            <li><a href="./TC.aspx"><i class="material-icons">web</i></a></li>
+                        </ul>
+                        <ul class="side-nav" id="mobile-demo">
+                            <li>
+                                <div class="user-view">
+                                    <div class="background">
+                                        <img src="https://i.pinimg.com/originals/77/44/80/7744806c7e15d502830a1fdd8e2a37e9.gif">
+                                    </div>
+                                    <h1 class="myFont">Ebae
+                                    </h1>
                                 </div>
-                                <h1 class="myFont">Ebae
-                                </h1>
-                            </div>
-                        </li>
-                        <li><a href="./user/Login.aspx">Login</a></li>
-                        <li><a href="./user/Register.aspx">Register</a></li>
-                        <li><a href="./About.aspx">About Us</a></li>
-                        <li>
-                            <div class="divider"></div>
-                        </li>
-                        <li><a class="subheader">T&C</a></li>
+                            </li>
+                            <li><a href="./user/Login.aspx">Login</a></li>
+                            <li><a href="./user/Register.aspx">Register</a></li>
+                            <li><a href="./About.aspx">About Us</a></li>
+                            <li>
+                                <div class="divider"></div>
+                            </li>
+                            <li><a class="subheader">T&C</a></li>
 
-                    </ul>
+                        </ul>
+                    </div>
+                </nav>
+
+
+            </div>
+        </nav>
+        <!--NavBar End-->
+
+
+        <!--Body-->
+
+        <div class="parallax-container">
+            <div class="parallax">
+                <img src="https://i.pinimg.com/originals/ff/fc/5a/fffc5a92c68455f331036891970b1fb9.gif" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3"><a href="#test1">Offers</a></li>
+                    <li class="tab col s3"><a href="#test2">Up for Sale</a></li>
+                    <li class="tab col s3"><a href="#test3">BID</a></li>
+                    <li class="tab col s3"><a href="#test4">Hot Deals</a></li>
+                </ul>
+            </div>
+            <div id="test1" class="col s12" style="padding: 1.4rem !important;">
+                DB SE USER SALES MAI KYA?
+            </div>
+            <div id="test2" class="col s12" style="padding: 1.4rem !important;">
+                DB SE OFFERS 
+            </div>
+            <div id="test3" class="col s12" style="padding: 1.4rem !important;">
+                DB SE Up for sales
+            </div>
+            <div id="test4" class="col s12" style="padding: 1.4rem !important;">
+                DB SE HOT DEALS
+            </div>
+        </div>
+
+        <div class="section white">
+            <div class="row container">
+                <h2 class="header myFont">Ebaeee</h2>
+                <p class="grey-text text-darken-3 lighten-3">
+                    Discover, Bid, and Win - Where Every Item Tells a Story.
+              Shop with Confidence, Knowing Quality is Our Promise.
+              Join Our Community of Buyers and Sellers - Together, We Thrive.
+              Experience the Excitement of Finding Your Perfect Match - Start Browsing Ebae Today!
+                </p>
+            </div>
+        </div>
+
+        <!--Body End-->
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-copyright">
+                        <div class="container">
+                            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                        </div>
+                    </div>
                 </div>
-            </nav>
-
-
-        </div>
-    </nav>
-    <!--NavBar End-->
-
-
-    <!--Body-->
-
-    <div class="parallax-container">
-        <div class="parallax">
-            <img src="https://i.pinimg.com/originals/9a/5e/46/9a5e46a4434dd0919dd69b4053f74563.gif" />
-        </div>
-    </div>
-    <div class="section white">
-        <div class="row container">
-            <h2 class="header myFont">Ebae</h2>
-            <p class="grey-text text-darken-3 lighten-3">
-                Discover, Bid, and Win - Where Every Item Tells a Story.
-                Shop with Confidence, Knowing Quality is Our Promise.
-                Join Our Community of Buyers and Sellers - Together, We Thrive.
-                Experience the Excitement of Finding Your Perfect Match - Start Browsing Ebae Today!
-            </p>
-        </div>
-
-        <div class="row container">
-            <h2 class="header myFont">What is This ?</h2>
-
-            <ul class="collapsible" data-collapsible="accordion">
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
-                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                </li>
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                </li>
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                </li>
-            </ul>
-        </div>
+            </div>
+        </footer>
     </div>
 
-    <!--Body End->
+
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
