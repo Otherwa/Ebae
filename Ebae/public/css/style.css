@@ -1,5 +1,44 @@
 ﻿.myFont {
-    font-family: Lobster Two, sans-serif; //for custom font
-    font-weight: 400;
+    font-family: Lobster Two, sans-serif;
+    //for custom font font-weight: 400;
     font-style: normal;
+}
+
+.parallax-container {
+    height: 40vh !important;
+    border-radius:5rem !important;
+    padding:0.15rem !important;
+}
+
+.body-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.body-wrapper-content {
+    max-width: 68rem !important;
+}
+
+nav {
+    box-shadow: none !important;
+}
+
+nav ul a,
+nav .brand-logo {
+    color: black;
+}
+
+.nav {
+    border-radius: 5rem;
+    margin:1rem 0 1rem 0;
+}
+
+nav ul a:hover {
+    border-radius: 5rem;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.row {
+padding: 1rem;
 }

@@ -11,7 +11,7 @@ namespace Ebae
 {
 
 
-    public partial class T_C
+    public partial class Default
     {
     }
 }

@@ -208,7 +208,6 @@
     <Content Include="materialize\js\materialize.js" />
     <Content Include="materialize\js\materialize.min.js" />
     <Content Include="mongocrypt.dll" />
-    <Content Include="public\assets\drone.png" />
     <Content Include="public\css\style.css" />
     <Content Include="public\css\TC.css" />
     <Content Include="public\js\index.js" />
@@ -273,6 +272,9 @@
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\AWSSDK.SecurityToken.3.7.100.14\analyzers\dotnet\cs\AWSSDK.SecurityToken.CodeAnalysis.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="public\assets\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
