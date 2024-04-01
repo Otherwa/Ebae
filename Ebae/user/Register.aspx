@@ -89,6 +89,34 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+    <div class="col s12 m5">
+        <div class="card-panel teal">
+            <form id="form2" runat="server">
+                <div>
+                    <h2>Login</h2>
+                    <div>
+                        <asp:Label ID="Label12" runat="server" Text="Username"></asp:Label>
+                        <asp:TextBox ID="txtUsername1" runat="server"></asp:TextBox>
+                    </div>
+                     
+                    <div>
+                        <asp:Label ID="Label23" runat="server" Text="Password"></asp:Label>
+                        <asp:TextBox ID="txtPassword1" runat="server" TextMode="Password"></asp:TextBox>
+                    </div>
+                     <div>
+                        <asp:Label ID="Label34" runat="server" Text="Confirm Password"></asp:Label>
+                        <asp:TextBox ID="TextBox12" runat="server" TextMode="Password"></asp:TextBox>
+                    </div>
+                    <div>
+                        <asp:Button ID="register" runat="server" Text="Welcome"  CssClass="btn btn-primary"  />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 
                 <div class="row">
                     <div class="col s12 m6">
@@ -122,5 +150,6 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
     <script type="text/javascript" src="../public/js/index.js"></script>
+    
 </body>
 </html>
