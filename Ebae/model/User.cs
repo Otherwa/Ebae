@@ -1,67 +1,61 @@
 ﻿using Ebae.dbconfig;
-using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 using System;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 
 namespace Ebae.model
 {
     public class User
     {
-        public string Username { get; set; }
+        public string Email { get; set; }
         public string Password { get; set; }
+        public string Name { get; set; }
 
-        public User(string username, string password)
+        public User(string email, string password, string name)
         {
-            Username = username;
+            Email = email;
             Password = password;
+            Name = name;
         }
 
-        public bool Register()
+        public string Register()
         {
             try
             {
                 // Check if user already exists
-                if (UserExists(Username))
+                if (UserExists(Email))
                 {
-                    // Log message
-                    Trace.WriteLine("User already exists.");
-
-                    return false;
+                    return "User already exists.";
                 }
 
                 // Insert new user into database
-                using (MySqlConnection connection = DbConfg.GetConnection())
+                using (SqlConnection connection = DbConfg.GetConnection())
                 {
                     connection.Open();
 
-                    string query = "INSERT INTO Users (Username, Password) VALUES (@Username, @Password)";
-                    MySqlCommand command = new MySqlCommand(query, connection);
+                    string query = "INSERT INTO [dbo].[user] (uid, email, [password], [name]) VALUES (2, @email, @password, @name)"; 
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@email", Email);
+                    command.Parameters.AddWithValue("@Password", Password);
+                    command.Parameters.AddWithValue("@name",Name );
 
                     // Execute the query
                     int rowsAffected = command.ExecuteNonQuery();
 
                     if (rowsAffected > 0)
                     {
-                        // Log message
-                        Trace.WriteLine("User registered successfully.");
-
-                        return true;
+                        return "User registered successfully.";
                     }
                     else
                     {
-                        // Log message
-                        Trace.WriteLine("User registration failed.");
-
-                        return false;
+                        return "User registration failed.";
                     }
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
-                // Log error
-                Trace.WriteLine($"Error registering user: {ex.Message}");
-
-                return false;
+                return $"Error registering user: {ex.Message}";
             }
         }
 
@@ -70,7 +64,7 @@ namespace Ebae.model
             try
             {
                 // Check if user credentials are valid
-                if (ValidateCredentials(Username, Password))
+                if (ValidateCredentials(Email, Password))
                 {
                     // Log message
                     Trace.WriteLine("Login successful.");
@@ -85,7 +79,7 @@ namespace Ebae.model
                     return false;
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 // Log error
                 Trace.WriteLine($"Error logging in: {ex.Message}");
@@ -94,15 +88,15 @@ namespace Ebae.model
             }
         }
 
-        private bool UserExists(string username)
+        private bool UserExists(string email)
         {
-            using (MySqlConnection connection = DbConfg.GetConnection())
+            using (SqlConnection connection = DbConfg.GetConnection())
             {
                 connection.Open();
 
-                string query = "SELECT COUNT(*) FROM Users WHERE Username = @Username";
-                MySqlCommand command = new MySqlCommand(query, connection);
-                command.Parameters.AddWithValue("@Username", username);
+                string query = "SELECT COUNT(*) FROM [dbo].[user] WHERE email = @email";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@email", email);
                 int count = Convert.ToInt32(command.ExecuteScalar());
                 return count > 0;
             }
@@ -110,17 +104,18 @@ namespace Ebae.model
 
         private bool ValidateCredentials(string username, string password)
         {
-            using (MySqlConnection connection = DbConfg.GetConnection())
+            using (SqlConnection connection = DbConfg.GetConnection())
             {
                 connection.Open();
 
                 string query = "SELECT COUNT(*) FROM Users WHERE Username = @Username AND Password = @Password";
-                MySqlCommand command = new MySqlCommand(query, connection);
+                SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Username", username);
                 command.Parameters.AddWithValue("@Password", password);
                 int count = Convert.ToInt32(command.ExecuteScalar());
                 return count > 0;
             }
         }
+
     }
 }

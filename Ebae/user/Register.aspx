@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Ebae.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Ebae.user.Register" %>
 
 <!DOCTYPE html>
 
@@ -83,9 +83,7 @@
                 <div class="row">
                     <div class="col s12 m5">
                         <div class="card-panel teal">
-                            <span class="white-text">I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
-                            </span>
+                            <asp:Label ID="Label1" runat="server" Text="Welcome"></asp:Label>
                         </div>
                     </div>
                 </div>
@@ -94,22 +92,25 @@
         <div class="card-panel teal">
             <form id="form2" runat="server">
                 <div>
-                    <h2>Login</h2>
+                    <h2>Register</h2>
                     <div>
-                        <asp:Label ID="Label12" runat="server" Text="Username"></asp:Label>
-                        <asp:TextBox ID="txtUsername1" runat="server"></asp:TextBox>
+                        <asp:Label ID="Label12" runat="server" Text="Email"></asp:Label>
+                        <asp:TextBox ID="emailTextBox" runat="server"></asp:TextBox>
                     </div>
-                     
+                    <div>
+                        <asp:Label ID="Label45" runat="server" Text="Name"></asp:Label>
+                        <asp:TextBox ID="nameTextBox" runat="server"></asp:TextBox>
+                    </div>
                     <div>
                         <asp:Label ID="Label23" runat="server" Text="Password"></asp:Label>
-                        <asp:TextBox ID="txtPassword1" runat="server" TextMode="Password"></asp:TextBox>
-                    </div>
-                     <div>
-                        <asp:Label ID="Label34" runat="server" Text="Confirm Password"></asp:Label>
-                        <asp:TextBox ID="TextBox12" runat="server" TextMode="Password"></asp:TextBox>
+                        <asp:TextBox ID="passwordTextBox1" runat="server" TextMode="Password"></asp:TextBox>
                     </div>
                     <div>
-                        <asp:Button ID="register" runat="server" Text="Welcome"  CssClass="btn btn-primary"  />
+                        <asp:Label ID="Label34" runat="server" Text="Confirm Password"></asp:Label>
+                        <asp:TextBox ID="passwordTextBox2" runat="server" TextMode="Password"></asp:TextBox>
+                    </div>
+                    <div>
+                        <asp:Button ID="register" runat="server" Text="Welcome"  CssClass="btn btn-primary" OnClick="register_Click"    />
                     </div>
                 </div>
             </form>

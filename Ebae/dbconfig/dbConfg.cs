@@ -1,5 +1,6 @@
-﻿using MySql.Data.MySqlClient;
+﻿using System.Data.SqlClient;
 using System.Configuration;
+using Amazon.Auth.AccessControlPolicy;
 
 namespace Ebae.dbconfig
 {
@@ -9,13 +10,14 @@ namespace Ebae.dbconfig
 
         static DbConfg()
         {
-            _connectionString = ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString;
+            _connectionString = ConfigurationManager.ConnectionStrings["SqlServer"].ConnectionString;
         }
 
-        public static MySqlConnection GetConnection(string databaseName = "Ebae")
+        public static SqlConnection GetConnection(string databaseName = "Ebae")
         {
+            string connectionStringWithDatabase = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = D:\Projects\Atharv\Ebae\Ebae\dbconfig\Ebae.mdf; Integrated Security = True; Connect Timeout = 30";
 
-            MySqlConnection connection = new MySqlConnection(_connectionString);
+            SqlConnection connection = new SqlConnection(connectionStringWithDatabase);
             return connection;
 
         }

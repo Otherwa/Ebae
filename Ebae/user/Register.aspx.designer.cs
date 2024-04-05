@@ -7,12 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Ebae
+namespace Ebae.user
 {
 
 
-    public partial class Default
+    public partial class Register
     {
+
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
         /// form2 control.
@@ -33,13 +42,31 @@ namespace Ebae
         protected global::System.Web.UI.WebControls.Label Label12;
 
         /// <summary>
-        /// txtUsername1 control.
+        /// emailTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUsername1;
+        protected global::System.Web.UI.WebControls.TextBox emailTextBox;
+
+        /// <summary>
+        /// Label45 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label45;
+
+        /// <summary>
+        /// nameTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox nameTextBox;
 
         /// <summary>
         /// Label23 control.
@@ -51,13 +78,13 @@ namespace Ebae
         protected global::System.Web.UI.WebControls.Label Label23;
 
         /// <summary>
-        /// txtPassword1 control.
+        /// passwordTextBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassword1;
+        protected global::System.Web.UI.WebControls.TextBox passwordTextBox1;
 
         /// <summary>
         /// Label34 control.
@@ -69,13 +96,13 @@ namespace Ebae
         protected global::System.Web.UI.WebControls.Label Label34;
 
         /// <summary>
-        /// TextBox12 control.
+        /// passwordTextBox2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox12;
+        protected global::System.Web.UI.WebControls.TextBox passwordTextBox2;
 
         /// <summary>
         /// register control.
