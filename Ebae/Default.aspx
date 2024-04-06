@@ -46,7 +46,7 @@
                             <li>
                                 <div class="user-view">
                                     <div class="background">
-                                        <img src="https://i.pinimg.com/originals/77/44/80/7744806c7e15d502830a1fdd8e2a37e9.gif">
+                                       <img src="https://i.pinimg.com/originals/77/44/80/7744806c7e15d502830a1fdd8e2a37e9.gif">
                                     </div>
                                     <h1 class="myFont">Ebae
                                     </h1>
