@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using Ebae.model;
 using System.Web.UI.WebControls;
 
 namespace Ebae.user
@@ -31,8 +32,9 @@ namespace Ebae.user
 
             if (isLoggedIn)
             {
+                Session["user"] = user;
                 // Redirect to the home page or any other desired page upon successful login
-                Response.Redirect("../Default.aspx");
+                Response.Redirect("./Dashboard.aspx");
             }
             else
             {

@@ -214,6 +214,7 @@
     <Content Include="public\js\index.js" />
     <Content Include="public\js\TC.js" />
     <Content Include="TC.aspx" />
+    <Content Include="user\Dashboard.aspx" />
     <Content Include="user\Login.aspx" />
     <Content Include="user\Register.aspx" />
     <Content Include="Web.config" />
@@ -242,6 +243,13 @@
     </Compile>
     <Compile Include="TC.aspx.designer.cs">
       <DependentUpon>TC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

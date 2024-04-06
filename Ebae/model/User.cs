@@ -8,6 +8,10 @@ namespace Ebae.model
 {
     public class User
     {
+        private string username;
+        private string password;
+        private string email;
+
         public string Email { get; set; }
         public string Password { get; set; }
         public string Name { get; set; }
