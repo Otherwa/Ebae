@@ -76,7 +76,7 @@
         <div>
             <div class="parallax-container">
                 <div class="parallax">
-                    <img src="https://static1.moviewebimages.com/wordpress/wp-content/uploads/2022/06/Transformers.jpg" />
+                    
                 </div>
             </div>
 
@@ -109,7 +109,7 @@
                     <div class="col s12 m6">
                         <div class="card">
                             <div class="card-image">
-                                <img src="https://static1.moviewebimages.com/wordpress/wp-content/uploads/2022/06/Transformers.jpg" />
+                               
                                 <span class="card-title">Card Title</span>
                                 <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                             </div>
