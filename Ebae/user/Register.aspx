@@ -122,7 +122,6 @@
                     <div class="col s12 m6">
                         <div class="card">
                             <div class="card-image">
- 
                                 <span class="card-title">Card Title</span>
                                 <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                             </div>

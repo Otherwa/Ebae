@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ebae.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,7 +18,6 @@ namespace Ebae.user
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-
             string username = txtUsername.Text;
             string password = txtPassword.Text;
 
