@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Ebae.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Ebae.user.Login" %>
 
 <!DOCTYPE html>
 
@@ -76,7 +76,6 @@
         <div>
             <div class="parallax-container">
                 <div class="parallax">
-                    <img src="https://static1.moviewebimages.com/wordpress/wp-content/uploads/2022/06/Transformers.jpg" />
                 </div>
             </div>
 
@@ -90,14 +89,15 @@
                                     <h2>Login</h2>
                                     <div>
                                         <asp:Label ID="Label1" runat="server" Text="Username"></asp:Label>
-                                        <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtUsername"  runat="server"></asp:TextBox>&nbsp;&nbsp;
+                                        <asp:Label ID="Label3" runat="server" Text=""></asp:Label>
                                     </div>
                                     <div>
                                         <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
                                         <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
                                     </div>
                                     <div>
-                                        <asp:Button ID="btnLogin" runat="server" Text="Login"  CssClass="btn btn-primary"  />
+                                        <asp:Button ID="btnLogin" runat="server" Text="Login"  CssClass="btn btn-primary" OnClick="btnLogin_Click"  />
                                     </div>
                                 </div>
                             </form>
@@ -109,7 +109,6 @@
                     <div class="col s12 m6">
                         <div class="card">
                             <div class="card-image">
-                                <img src="https://static1.moviewebimages.com/wordpress/wp-content/uploads/2022/06/Transformers.jpg" />
                                 <span class="card-title">Card Title</span>
                                 <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                             </div>
