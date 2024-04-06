@@ -19,6 +19,12 @@ namespace Ebae.model
             Name = name;
         }
 
+        public User(string email, string password)
+        {
+            Email = email;
+            Password = password;
+        }
+
         public string Register()
         {
             try
@@ -108,7 +114,7 @@ namespace Ebae.model
             {
                 connection.Open();
 
-                string query = "SELECT COUNT(*) FROM Users WHERE Username = @Username AND Password = @Password";
+                string query = "SELECT COUNT(*) FROM [dbo].[user] WHERE email = @Username AND password = @Password";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Username", username);
                 command.Parameters.AddWithValue("@Password", password);
