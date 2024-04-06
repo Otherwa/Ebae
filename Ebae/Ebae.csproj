@@ -203,9 +203,6 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="dbconfig\Ebae.mdf" />
-    <Content Include="dbconfig\Ebae_log.ldf">
-      <DependentUpon>Ebae.mdf</DependentUpon>
-    </Content>
     <Content Include="Default.aspx" />
     <Content Include="materialize\css\materialize.css" />
     <Content Include="materialize\css\materialize.min.css" />
