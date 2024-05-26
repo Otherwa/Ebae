@@ -21,7 +21,7 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    
+
 
     <!--Custom Styles-->
     <link href="../public/css/style.css" rel="stylesheet" />
@@ -48,7 +48,7 @@
                             <li>
                                 <div class="user-view">
                                     <div class="background">
-                                        <img src="https://i.pinimg.com/originals/77/44/80/7744806c7e15d502830a1fdd8e2a37e9.gif"/>
+                                        <img src="https://i.pinimg.com/originals/77/44/80/7744806c7e15d502830a1fdd8e2a37e9.gif" />
                                     </div>
                                     <h1 class="myFont">Ebae
                                     </h1>
@@ -74,13 +74,9 @@
 
         <!--Body-->
         <div>
-            <div class="parallax-container">
-                <div class="parallax">
-                </div>
-            </div>
 
             <div class="row">
-                
+
                 <div class="row">
                     <div class="col s12 m5">
                         <div class="card-panel teal">
@@ -89,7 +85,7 @@
                                     <h2>Login</h2>
                                     <div>
                                         <asp:Label ID="Label1" runat="server" Text="Username"></asp:Label>
-                                        <asp:TextBox ID="txtUsername"  runat="server"></asp:TextBox>&nbsp;&nbsp;
+                                        <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>&nbsp;&nbsp;
                                         <asp:Label ID="Label3" runat="server" Text=""></asp:Label>
                                     </div>
                                     <div>
@@ -97,15 +93,12 @@
                                         <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
                                     </div>
                                     <div>
-                                        <asp:Button ID="btnLogin" runat="server" Text="Login"  CssClass="btn btn-primary" OnClick="btnLogin_Click"  />
+                                        <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn btn-primary" OnClick="btnLogin_Click" />
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
-                </div>
-
-                <div class="row">
                     <div class="col s12 m6">
                         <div class="card">
                             <div class="card-image">
@@ -119,9 +112,8 @@
                     </div>
                 </div>
 
+
                 <!--Form -->
-
-
             </div>
 
         </div>

@@ -39,9 +39,10 @@
                         <a href="/" class="brand-logo myFont" style="padding-left: 1.25rem;">Ebaeee</a>
                         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                         <ul class="right hide-on-med-and-down">
+                            <li><a href="./CRUD.aspx">Manage</a></li>
                             <li>
                                 <form runat="server">
-                                    <asp:Button CssClass="waves-effect waves-light btn-small" ID="Button1" runat="server" Text="Logout" ForeColor="Black" OnClick="Logout" />
+                                    <asp:Button CssClass="waves-effect waves-teal btn-flat" ID="Button1" runat="server" Text="Logout" ForeColor="Black" OnClick="Logout" />
                                 </form>
                             </li>
                         </ul>
@@ -73,8 +74,17 @@
 
         <!--Body-->
 
-        <div style="width: 52rem;">
-            <asp:Label ID="User" runat="server" Text="Label"></asp:Label>
+        <div style="width: 80vw;">
+            <div style="padding: 1.25rem">
+
+                <!--Chip-->
+                <div class="chip">
+                    <asp:Label ID="UserEmail" runat="server" Text="Label"></asp:Label>
+                </div>
+
+
+
+            </div>
         </div>
 
         <!--Body End-->

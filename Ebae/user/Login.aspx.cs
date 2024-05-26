@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using Ebae.model;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
 
 namespace Ebae.user
 {
@@ -15,6 +16,8 @@ namespace Ebae.user
         {
 
         }
+
+      
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
@@ -32,7 +35,7 @@ namespace Ebae.user
 
             if (isLoggedIn)
             {
-                Session["user"] = user;
+
                 // Redirect to the home page or any other desired page upon successful login
                 Response.Redirect("./Dashboard.aspx");
             }
