@@ -217,6 +217,7 @@
     <Content Include="user\Dashboard.aspx" />
     <Content Include="user\Login.aspx" />
     <Content Include="user\Register.aspx" />
+    <Content Include="user\CRUD.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -235,6 +236,7 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="model\Product.cs" />
     <Compile Include="model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TC.aspx.cs">
@@ -264,6 +266,13 @@
     </Compile>
     <Compile Include="user\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\CRUD.aspx.cs">
+      <DependentUpon>CRUD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\CRUD.aspx.designer.cs">
+      <DependentUpon>CRUD.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

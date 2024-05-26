@@ -72,23 +72,15 @@
 
         <!--Body-->
         <div>
-            <div class="parallax-container">
-                <div class="parallax">
-                </div>
-            </div>
+
 
             <div class="row">
                 <h1>Register</h1>
+
                 <div class="row">
-                    <div class="col s12 m5">
+                    <div class="col s12 m5 p5">
                         <div class="card-panel teal">
-                            <asp:Label ID="Label1" runat="server" Text="Welcome"></asp:Label>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 m5">
-                        <div class="card-panel teal">
+                            <asp:Label ID="Label1" runat="server"></asp:Label>
                             <form id="form2" runat="server">
                                 <div>
                                     <h2>Register</h2>
@@ -115,11 +107,8 @@
                             </form>
                         </div>
                     </div>
-                </div>
 
-
-                <div class="row">
-                    <div class="col s12 m6">
+                    <div class="col s12 m6 p5">
                         <div class="card">
                             <div class="card-image">
                                 <span class="card-title">Card Title</span>
