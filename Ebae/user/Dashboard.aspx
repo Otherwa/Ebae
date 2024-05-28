@@ -26,6 +26,44 @@
     <!--Custom Styles-->
     <link href="../public/css/style.css" rel="stylesheet" />
 
+   <!-- css for products cards starts here-->
+      <style>
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 30%;
+            padding: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            max-width: 100%;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .card-title {
+            font-size: 1.2em;
+            margin: 16px 0 8px;
+        }
+
+        .card-description {
+            font-size: 1em;
+            color: #555;
+        }
+    </style>
+    <!-- css for products cards ends here-->
 </head>
 
 <body class="body-wrapper">
@@ -87,6 +125,23 @@
             </div>
         </div>
 
+        <div class="card-container">
+    <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
+        <div class="card-title">Card Title 1</div>
+        <div class="card-description">This is a description of card 1.</div>
+    </div>
+    <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
+        <div class="card-title">Card Title 2</div>
+        <div class="card-description">This is a description of card 2.</div>
+    </div>
+    <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
+        <div class="card-title">Card Title 3</div>
+        <div class="card-description">This is a description of card 3.</div>
+    </div>
+</div>
         <!--Body End-->
     </div>
 
