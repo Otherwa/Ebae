@@ -142,7 +142,13 @@
                 <asp:Image ID="imgProduct" runat="server" Width="100px" />
             </ItemTemplate>
         </asp:TemplateField>
+         <asp:TemplateField HeaderText="Checkout">
+     <ItemTemplate>
+             <asp:Button ID="Button1" runat="server" Text="Buy Now"  />
+     </ItemTemplate>
+ </asp:TemplateField>
     </Columns>
+    
 </asp:GridView>
         
 <!--        <div class="card-container">

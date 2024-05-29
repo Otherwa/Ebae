@@ -339,7 +339,8 @@ namespace Ebae.model
                         Description = reader.GetString(2),
                         Price = reader.GetDecimal(3),
                         Availability = reader.GetBoolean(4),
-                        Image = reader.IsDBNull(5) ? null : reader.GetString(5) // Retrieve image as base64 string
+                        Image = reader.IsDBNull(5) ? null : reader.GetString(5) 
+                         // Retrieve image as base64 string
                     };
                     products.Add(product);
                 }
