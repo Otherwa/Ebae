@@ -79,9 +79,11 @@
                         <ul class="right hide-on-med-and-down">
                             <li><a href="./CRUD.aspx">Manage</a></li>
                             <li>
-                                <form runat="server">
+                                <form runat="server" >
                                     <asp:Button CssClass="waves-effect waves-teal btn-flat" ID="Button1" runat="server" Text="Logout" ForeColor="Black" OnClick="Logout" />
-                                </form>
+                               
+                               
+
                             </li>
                         </ul>
                         <ul class="side-nav" id="mobile-demo">
@@ -98,7 +100,8 @@
                             <li>
                                 <div class="divider"></div>
                             </li>
-                            <li><a class="subheader">T&C</a></li>
+                            <li><a class="subheader">T&C
+                                </a></li>
 
                         </ul>
                     </div>
@@ -124,8 +127,25 @@
 
             </div>
         </div>
-
-        <div class="card-container">
+        
+        
+        <h2>Products</h2>
+<asp:GridView ID="gvProducts" runat="server" AutoGenerateColumns="False" OnRowDataBound="gvProducts_RowDataBound">
+    <Columns>
+        <asp:BoundField DataField="ProductId" HeaderText="ID" />
+        <asp:BoundField DataField="Name" HeaderText="Name" />
+        <asp:BoundField DataField="Description" HeaderText="Description" />
+        <asp:BoundField DataField="Price" HeaderText="Price" />
+        <asp:CheckBoxField DataField="Availability" HeaderText="Available" />
+        <asp:TemplateField HeaderText="Image">
+            <ItemTemplate>
+                <asp:Image ID="imgProduct" runat="server" Width="100px" />
+            </ItemTemplate>
+        </asp:TemplateField>
+    </Columns>
+</asp:GridView>
+        
+<!--        <div class="card-container">
     <div class="card">
         <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
         <div class="card-title">Product1<br />
@@ -155,10 +175,11 @@
         <div class="card-description">This is a description of card 3.</div>
     </div>
 </div>
+        -->
         <!--Body End-->
     </div>
 
-
+    </form>
 
 
     <!--Import jQuery before materialize.js-->
