@@ -72,58 +72,45 @@
 
         <!--Body-->
         <div>
-            <div class="parallax-container">
-                <div class="parallax">
-                    <img src="https://static1.moviewebimages.com/wordpress/wp-content/uploads/2022/06/Transformers.jpg" />
-                </div>
-            </div>
+
 
             <div class="row">
                 <h1>Register</h1>
+
                 <div class="row">
-                    <div class="col s12 m5">
+                    <div class="col s12 m5 p5">
                         <div class="card-panel teal">
-                            <asp:Label ID="Label1" runat="server" Text="Welcome"></asp:Label>
+                            <asp:Label ID="Label1" runat="server"></asp:Label>
+                            <form id="form2" runat="server">
+                                <div>
+                                    <h2>Register</h2>
+                                    <div>
+                                        <asp:Label ID="Label12" runat="server" Text="Email"></asp:Label>
+                                        <asp:TextBox ID="emailTextBox" runat="server"></asp:TextBox>
+                                    </div>
+                                    <div>
+                                        <asp:Label ID="Label45" runat="server" Text="Name"></asp:Label>
+                                        <asp:TextBox ID="nameTextBox" runat="server"></asp:TextBox>
+                                    </div>
+                                    <div>
+                                        <asp:Label ID="Label23" runat="server" Text="Password"></asp:Label>
+                                        <asp:TextBox ID="passwordTextBox1" runat="server" TextMode="Password"></asp:TextBox>
+                                    </div>
+                                    <div>
+                                        <asp:Label ID="Label34" runat="server" Text="Confirm Password"></asp:Label>
+                                        <asp:TextBox ID="passwordTextBox2" runat="server" TextMode="Password"></asp:TextBox>
+                                    </div>
+                                    <div>
+                                        <asp:Button ID="register" runat="server" Text="Welcome" CssClass="btn btn-primary" OnClick="register_Click" />
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-    <div class="col s12 m5">
-        <div class="card-panel teal">
-            <form id="form2" runat="server">
-                <div>
-                    <h2>Register</h2>
-                    <div>
-                        <asp:Label ID="Label12" runat="server" Text="Email"></asp:Label>
-                        <asp:TextBox ID="emailTextBox" runat="server"></asp:TextBox>
-                    </div>
-                    <div>
-                        <asp:Label ID="Label45" runat="server" Text="Name"></asp:Label>
-                        <asp:TextBox ID="nameTextBox" runat="server"></asp:TextBox>
-                    </div>
-                    <div>
-                        <asp:Label ID="Label23" runat="server" Text="Password"></asp:Label>
-                        <asp:TextBox ID="passwordTextBox1" runat="server" TextMode="Password"></asp:TextBox>
-                    </div>
-                    <div>
-                        <asp:Label ID="Label34" runat="server" Text="Confirm Password"></asp:Label>
-                        <asp:TextBox ID="passwordTextBox2" runat="server" TextMode="Password"></asp:TextBox>
-                    </div>
-                    <div>
-                        <asp:Button ID="register" runat="server" Text="Welcome"  CssClass="btn btn-primary" OnClick="register_Click"    />
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
 
-
-                <div class="row">
-                    <div class="col s12 m6">
+                    <div class="col s12 m6 p5">
                         <div class="card">
                             <div class="card-image">
-                                <img src="https://static1.moviewebimages.com/wordpress/wp-content/uploads/2022/06/Transformers.jpg" />
                                 <span class="card-title">Card Title</span>
                                 <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                             </div>
@@ -151,6 +138,6 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
     <script type="text/javascript" src="../public/js/index.js"></script>
-    
+
 </body>
 </html>

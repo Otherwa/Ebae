@@ -203,9 +203,6 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="dbconfig\Ebae.mdf" />
-    <Content Include="dbconfig\Ebae_log.ldf">
-      <DependentUpon>Ebae.mdf</DependentUpon>
-    </Content>
     <Content Include="Default.aspx" />
     <Content Include="materialize\css\materialize.css" />
     <Content Include="materialize\css\materialize.min.css" />
@@ -217,8 +214,10 @@
     <Content Include="public\js\index.js" />
     <Content Include="public\js\TC.js" />
     <Content Include="TC.aspx" />
+    <Content Include="user\Dashboard.aspx" />
     <Content Include="user\Login.aspx" />
     <Content Include="user\Register.aspx" />
+    <Content Include="user\CRUD.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -237,6 +236,7 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="model\Product.cs" />
     <Compile Include="model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TC.aspx.cs">
@@ -245,6 +245,13 @@
     </Compile>
     <Compile Include="TC.aspx.designer.cs">
       <DependentUpon>TC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -259,6 +266,13 @@
     </Compile>
     <Compile Include="user\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\CRUD.aspx.cs">
+      <DependentUpon>CRUD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\CRUD.aspx.designer.cs">
+      <DependentUpon>CRUD.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
