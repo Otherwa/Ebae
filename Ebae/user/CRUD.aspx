@@ -25,6 +25,7 @@
 
     <!--Custom Styles-->
     <link href="../public/css/style.css" rel="stylesheet" />
+  
 
 </head>
 
@@ -82,8 +83,13 @@
                     <asp:TextBox ID="txtProductDescription" runat="server"></asp:TextBox><br />
                     <label for="txtProductPrice">Product Price:</label>
                     <asp:TextBox ID="txtProductPrice" runat="server"></asp:TextBox><br />
-                    <label for="chkProductAvailability">Available:</label>
-                    <asp:CheckBox ID="chkProductAvailability" runat="server" /><br />
+                    <label for="chkProductAvailability">Product Availablity:</label>
+                   
+
+                    <asp:CheckBox ID="chkProductAvailability" runat="server" BackColor="White" ForeColor="Black" Text="Available" />&nbsp; &nbsp;
+
+                 
+                      <asp:Label ID="Label1" runat="server">Available</asp:Label><br/> <br /> <br /> <br />
                     <label for="fuProductImage">Product Image:</label>
                     <asp:FileUpload ID="fuProductImage" runat="server" /><br />
 

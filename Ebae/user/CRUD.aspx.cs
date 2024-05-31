@@ -20,7 +20,7 @@ namespace Ebae.user
         {
             if (!IsPostBack)
             {
-                LoadProducts();
+              LoadProducts();
             }
         }
 

@@ -316,5 +316,38 @@ namespace Ebae.model
 
             return products;
         }
+
+        public List<Product> GetDashboardProducts(int userId)
+        {
+            List<Product> products = new List<Product>();
+
+            using (SqlConnection connection = DbConfg.GetConnection())
+            {
+                string query = "SELECT product_id, name, description, price, availability, image FROM Products WHERE user_id != @userId";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@userId", userId);
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Product product = new Product
+                    {
+                        ProductId = reader.GetInt32(0),
+                        Name = reader.GetString(1),
+                        Description = reader.GetString(2),
+                        Price = reader.GetDecimal(3),
+                        Availability = reader.GetBoolean(4),
+                        Image = reader.IsDBNull(5) ? null : reader.GetString(5) 
+                         // Retrieve image as base64 string
+                    };
+                    products.Add(product);
+                }
+            }
+
+            return products;
+        }
+
     }
 }

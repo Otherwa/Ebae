@@ -41,6 +41,7 @@ namespace Ebae.user
             return cookie != null ? cookie.Value : null;
         }
 
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["user"] != null)
@@ -53,6 +54,8 @@ namespace Ebae.user
                SetUserCookies(user);
 
                UserEmail.Text = GetCookieValue("userEmail");
+
+                LoadDashBoardProducts();
             
             }
             else
@@ -67,5 +70,34 @@ namespace Ebae.user
             Session.Clear();
             Response.Redirect("./Login.aspx");
         }
+
+        private void LoadDashBoardProducts()
+        {
+            User user = (User)Session["user"];
+            int userId = user.Uid;
+
+            List<Product> productList = user.GetDashboardProducts(userId);
+
+            gvProducts.DataSource = productList;
+            gvProducts.DataBind();
+        }
+        protected void gvProducts_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                Product product = (Product)e.Row.DataItem;
+                Image imgProduct = (Image)e.Row.FindControl("imgProduct");
+
+                if (product.Image != null)
+                {
+                    imgProduct.ImageUrl = "data:image/png;base64," + product.Image;
+                }
+                else
+                {
+                    imgProduct.Visible = false;
+                }
+            }
+        }
+
     }
 }
