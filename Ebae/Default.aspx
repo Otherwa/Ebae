@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Ebae.Default" %>
+﻿﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Ebae.Default" %>
 
 <!DOCTYPE html>
 
@@ -74,30 +74,22 @@
 
         <div class="parallax-container">
             <div class="parallax">
-                <img src="https://i.pinimg.com/originals/ff/fc/5a/fffc5a92c68455f331036891970b1fb9.gif" />
+                <video src="public/assets/finalfinal.mp4" autoplay muted loop type="video/mp4" />
             </div>
         </div>
 
         <div class="row">
             <div class="col s12">
                 <ul class="tabs">
-                    <li class="tab col s3"><a href="#test1">Offers</a></li>
-                    <li class="tab col s3"><a href="#test2">Up for Sale</a></li>
-                    <li class="tab col s3"><a href="#test3">BID</a></li>
-                    <li class="tab col s3"><a href="#test4">Hot Deals</a></li>
+                    <li class="tab col s6"><a href="#test1">Offers</a></li>
+                    <li class="tab col s6"><a href="#test2">BID</a></li>
                 </ul>
             </div>
             <div id="test1" class="col s12" style="padding: 1.4rem !important;">
-                DB SE USER SALES MAI KYA?
+                <iframe src="homeitems/Offers.aspx" style="width:100%;height:800px;border:none"></iframe>
             </div>
             <div id="test2" class="col s12" style="padding: 1.4rem !important;">
-                DB SE OFFERS 
-            </div>
-            <div id="test3" class="col s12" style="padding: 1.4rem !important;">
-                DB SE Up for sales
-            </div>
-            <div id="test4" class="col s12" style="padding: 1.4rem !important;">
-                DB SE HOT DEALS
+                <iframe src="homeitems/Bid.aspx" style="width: 100%; height: 800px; border: none"></iframe>
             </div>
         </div>
 

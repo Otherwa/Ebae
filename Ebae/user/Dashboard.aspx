@@ -26,6 +26,44 @@
     <!--Custom Styles-->
     <link href="../public/css/style.css" rel="stylesheet" />
 
+   <!-- css for products cards starts here-->
+      <style>
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 30%;
+            padding: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            max-width: 100%;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .card-title {
+            font-size: 1.2em;
+            margin: 16px 0 8px;
+        }
+
+        .card-description {
+            font-size: 1em;
+            color: #555;
+        }
+    </style>
+    <!-- css for products cards ends here-->
 </head>
 
 <body class="body-wrapper">
@@ -41,9 +79,11 @@
                         <ul class="right hide-on-med-and-down">
                             <li><a href="./CRUD.aspx">Manage</a></li>
                             <li>
-                                <form runat="server">
+                                <form runat="server" >
                                     <asp:Button CssClass="waves-effect waves-teal btn-flat" ID="Button1" runat="server" Text="Logout" ForeColor="Black" OnClick="Logout" />
-                                </form>
+                               
+                               
+
                             </li>
                         </ul>
                         <ul class="side-nav" id="mobile-demo">
@@ -60,7 +100,8 @@
                             <li>
                                 <div class="divider"></div>
                             </li>
-                            <li><a class="subheader">T&C</a></li>
+                            <li><a class="subheader">T&C
+                                </a></li>
 
                         </ul>
                     </div>
@@ -86,11 +127,36 @@
 
             </div>
         </div>
+        
+        
+        <h2>Products</h2>
+<asp:GridView ID="gvProducts" runat="server" AutoGenerateColumns="False" OnRowDataBound="gvProducts_RowDataBound">
+    <Columns>
+        <asp:BoundField DataField="ProductId" HeaderText="ID" />
+        <asp:BoundField DataField="Name" HeaderText="Name" />
+        <asp:BoundField DataField="Description" HeaderText="Description" />
+        <asp:BoundField DataField="Price" HeaderText="Price" />
+        <asp:CheckBoxField DataField="Availability" HeaderText="Available" />
+        <asp:TemplateField HeaderText="Image">
+            <ItemTemplate>
+                <asp:Image ID="imgProduct" runat="server" Width="100px" />
+            </ItemTemplate>
+        </asp:TemplateField>
+         <asp:TemplateField HeaderText="Checkout">
+     <ItemTemplate>
+             <asp:Button ID="Button1" runat="server" Text="Buy Now" CommandArgument='<%# Eval("ProductId") %>' OnClick="goToCheckout"  />
+     </ItemTemplate>
+ </asp:TemplateField>
+    </Columns>
+    
+</asp:GridView>
+        
+
 
         <!--Body End-->
     </div>
 
-
+    </form>
 
 
     <!--Import jQuery before materialize.js-->

@@ -15,7 +15,7 @@ namespace Ebae.dbconfig
 
         public static SqlConnection GetConnection(string databaseName = "Ebae")
         {
-            string connectionStringWithDatabase = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\athar\source\repos\Ebae\Ebae\dbconfig\Ebae.mdf;Integrated Security=True;Connect Timeout=30";
+            string connectionStringWithDatabase = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Projects\Atharv\Ebae\Ebae\dbconfig\Ebae.mdf;Integrated Security=True;Connect Timeout=30";
             SqlConnection connection = new SqlConnection(connectionStringWithDatabase);
             return connection;
 
