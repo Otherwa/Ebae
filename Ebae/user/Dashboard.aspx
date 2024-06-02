@@ -144,44 +144,15 @@
         </asp:TemplateField>
          <asp:TemplateField HeaderText="Checkout">
      <ItemTemplate>
-             <asp:Button ID="Button1" runat="server" Text="Buy Now"  />
+             <asp:Button ID="Button1" runat="server" Text="Buy Now" CommandArgument='<%# Eval("ProductId") %>' OnClick="goToCheckout"  />
      </ItemTemplate>
  </asp:TemplateField>
     </Columns>
     
 </asp:GridView>
         
-<!--        <div class="card-container">
-    <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
-        <div class="card-title">Product1<br />
-            <asp:HyperLink ID="HyperLink1" runat="server"  NavigateUrl="https://www.google.co.in/" Target="_blank">HyperLink</asp:HyperLink>
-            <br />
-           
-        </div>
-        <div class="card-description">This is a description of card 1.</div>
-    </div>
-    <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
-        <div class="card-title">Product2<br />
-            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="https://www.google.co.in/" Target="_blank">HyperLink</asp:HyperLink>
-            <br />
-            
-        </div>
-        <div class="card-description">This is a description of card 2.</div>
-    </div>
-    <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
-        <div class="card-title">Product3<br />
-            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="https://www.google.co.in/" Target="_blank">HyperLink</asp:HyperLink>
-            <br />
-           
-        </div>
-   
-        <div class="card-description">This is a description of card 3.</div>
-    </div>
-</div>
-        -->
+
+
         <!--Body End-->
     </div>
 
