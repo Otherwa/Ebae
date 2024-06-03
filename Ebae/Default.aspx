@@ -89,7 +89,7 @@
                 <iframe src="homeitems/Offers.aspx" style="width:100%;height:800px;border:none"></iframe>
             </div>
             <div id="test2" class="col s12" style="padding: 1.4rem !important;">
-                <iframe src="homeitems/Bid.aspx" style="width: 100%; height: 800px; border: none"></iframe>
+                <iframe src="homeitems/Bid.aspx" style="width: 100%; height: 1500px; border: none"></iframe>
             </div>
         </div>
 

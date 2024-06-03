@@ -17,7 +17,6 @@
     <!--Import materialize.css-->
 
     <link type="text/css" rel="stylesheet" href="../materialize/css/materialize.css" media="screen,projection" />
-
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -25,7 +24,6 @@
 
     <!--Custom Styles-->
     <link href="../public/css/style.css" rel="stylesheet" />
-
    <!-- css for products cards starts here-->
       <style>
         .card-container {
@@ -144,7 +142,7 @@
         </asp:TemplateField>
          <asp:TemplateField HeaderText="Checkout">
      <ItemTemplate>
-             <asp:Button ID="Button1" runat="server" Text="Buy Now" CommandArgument='<%# Eval("ProductId") %>' OnClick="goToCheckout"  />
+             <asp:Button ID="Button1" runat="server" Text="Buy Now" CommandArgument='<%# Eval("ProductId") %>' OnClick="goToCheckout" CssClass="btn" />
      </ItemTemplate>
  </asp:TemplateField>
     </Columns>

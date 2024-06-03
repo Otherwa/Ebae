@@ -50,7 +50,7 @@ namespace Ebae
             Product product = Product.GetProductById(productId);
 
 
-            productImage.Src = product.Image;
+            productImage.Src = "data:image/png;base64," + product.Image;
             productName.InnerText = product.Name;
             productPrice.InnerText = product.Price.ToString();
             productQuantity.InnerText = quantity.ToString();
