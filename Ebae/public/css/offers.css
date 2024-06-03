@@ -123,7 +123,7 @@ body {
     width: 37rem;
     height: 42rem;
     border-radius: 2rem;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .tranding-slide .tranding-slide-content {
@@ -134,11 +134,11 @@ body {
     bottom: 0;
 }
 
-.tranding-slide-content .food-price {
+.tranding-slide-content .product-price {
     position: absolute;
     top: 2rem;
     right: 2rem;
-    color: var(--white);
+    color: black;
 }
 
 .tranding-slide-content .tranding-slide-content-bottom {

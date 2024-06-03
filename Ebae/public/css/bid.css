@@ -23,6 +23,7 @@ img {
 
 .img-display {
     overflow: hidden;
+    width:60vh
 }
 
 .img-showcase {
@@ -31,9 +32,6 @@ img {
     transition: all 0.5s ease;
 }
 
-    .img-showcase img {
-        min-width: 100%;
-    }
 
 .img-select {
     display: flex;

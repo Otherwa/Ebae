@@ -13,6 +13,14 @@ namespace Ebae.homeitems
 {
     public partial class hotdeals : System.Web.UI.Page
     {
+        public class ProductItem
+        {
+            public string Name { get; set; }
+            public decimal Price { get; set; }
+            public string ImageUrl { get; set; }
+        }
+
+        public List<ProductItem> ProductItems { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -23,16 +31,22 @@ namespace Ebae.homeitems
 
         private void LoadProducts()
         {
-            using (SqlConnection conn = DbConfg.GetConnection())
+            ProductItems = new List<ProductItem>();
+            string query = "SELECT name, price, image FROM Products";
+
+            using (SqlConnection connection = DbConfg.GetConnection())
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Products", conn))
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
                 {
-                    conn.Open();
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    DataTable dt = new DataTable();
-                    dt.Load(reader);
-                    rptProducts.DataSource = dt;
-                    rptProducts.DataBind();
+                    ProductItems.Add(new ProductItem
+                    {
+                        Name = reader["name"].ToString(),
+                        Price = Convert.ToDecimal(reader["price"]),
+                        ImageUrl = "data:image/png;base64," + reader["image"].ToString(),
+                    });
                 }
             }
         }

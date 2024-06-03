@@ -209,7 +209,10 @@
     <Content Include="homeitems\Offers.aspx" />
     <Content Include="materialize\css\materialize.css" />
     <Content Include="materialize\css\materialize.min.css" />
+    <Content Include="public\assets\air-jordan-7-retro-black-gloss-release-date.jpg" />
+    <Content Include="public\assets\Alia.png" />
     <Content Include="public\css\bid.css" />
+    <Content Include="public\css\button.css" />
     <Content Include="public\css\checkout.css" />
     <Content Include="materialize\js\materialize.js" />
     <Content Include="materialize\js\materialize.min.js" />

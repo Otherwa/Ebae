@@ -12,7 +12,6 @@
     <link href="../public/css/offers.css" rel="stylesheet" />
 
 </head>
-
 <body>
     <section id="tranding">
         <div class="container">
@@ -21,25 +20,27 @@
         </div>
         <div class="container">
             <div class="swiper tranding-slider">
-                <form id="form1" runat="server">
-                    <div class="swiper-wrapper">
-                        <asp:Repeater ID="rptProducts" runat="server">
-                            <ItemTemplate>
-                                <div class="swiper-slide tranding-slide">
-                                    <div class="tranding-slide-img">
-                                        <img src='<%# Eval("image") %>' alt="Tranding" />
-                                    </div>
-                                    <div class="tranding-slide-content">
-                                        <h1 class="product-price">$<%# Eval("price") %></h1>
-                                        <div class="tranding-slide-content-bottom">
-                                            <h2 class="product-name"><%# Eval("name") %></h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </ItemTemplate>
-                        </asp:Repeater>
+                <div class="swiper-wrapper">
+                    <% 
+                        foreach (var item in ProductItems)
+                        {
+                    %>
+                    <div class="swiper-slide tranding-slide">
+                        <div class="tranding-slide-img">
+                            <img src="<%= item.ImageUrl %>" alt="Trending">
+                        </div>
+                        <div class="tranding-slide-content">
+                            <h1 class="product-price">₹<%= item.Price %></h1>
+                            <div class="tranding-slide-content-bottom">
+                                <h2 class="food-name" style="color:black"><%= item.Name %></h2>
+                            </div>
+                        </div>
                     </div>
-                </form>
+                    <%
+                        }
+                    %>
+                </div>
+
                 <div class="tranding-slider-control">
                     <div class="swiper-button-prev slider-arrow">
                         <ion-icon name="arrow-back-outline"></ion-icon>
@@ -49,7 +50,6 @@
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -59,5 +59,4 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="../public/js/Offers.js"></script>
 </body>
-
 </html>

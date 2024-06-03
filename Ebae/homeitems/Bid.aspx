@@ -19,10 +19,7 @@
         <div class = "product-imgs">
           <div class = "img-display">
             <div class = "img-showcase">
-              <img src = "shoes_images/shoe_1.jpg" alt = "shoe image">
-              <img src = "shoes_images/shoe_2.jpg" alt = "shoe image">
-              <img src = "shoes_images/shoe_3.jpg" alt = "shoe image">
-              <img src = "shoes_images/shoe_4.jpg" alt = "shoe image">
+                <img src="../public/assets/air-jordan-7-retro-black-gloss-release-date.jpg" />
             </div>
           </div>
         </div>
@@ -31,8 +28,8 @@
           <h2 class = "product-title">nike shoes</h2>
 
           <div class = "product-price">
-            <p class = "starting-price">Starting price: <span>$257.00</span></p>
-            <p class = "current-bid">Current Bid: <span>$249.00 (5%)</span></p>
+            <p class = "starting-price">Starting price: <span>$120.00</span></p>
+            <p class = "current-bid">Current Bid: <span>$130.00</span></p>
           </div>
 
 
