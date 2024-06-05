@@ -192,8 +192,7 @@ namespace Ebae.model
                 {
                     connection.Open();
 
-                    string query = "INSERT INTO Products (user_id, name, description, price, availability, image) " +
-                                   "VALUES (@userId, @name, @description, @price, @availability, @image)";
+                    string query = "INSERT INTO Products (user_id, name, description, price, availability, image) VALUES (@userId, @name, @description, @price, @availability, @image)";
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@userId", product.UserId);
                     command.Parameters.AddWithValue("@name", product.Name);

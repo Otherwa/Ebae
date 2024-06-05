@@ -202,16 +202,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Checkout.aspx" />
     <Content Include="dbconfig\Ebae.mdf" />
     <Content Include="Default.aspx" />
+    <Content Include="homeitems\Bid.aspx" />
+    <Content Include="homeitems\Offers.aspx" />
     <Content Include="materialize\css\materialize.css" />
     <Content Include="materialize\css\materialize.min.css" />
+    <Content Include="public\assets\air-jordan-7-retro-black-gloss-release-date.jpg" />
+    <Content Include="public\assets\Alia.png" />
+    <Content Include="public\css\bid.css" />
+    <Content Include="public\css\button.css" />
+    <Content Include="public\css\checkout.css" />
     <Content Include="materialize\js\materialize.js" />
     <Content Include="materialize\js\materialize.min.js" />
     <Content Include="mongocrypt.dll" />
+    <Content Include="public\assets\finalfinal.mp4" />
+    <Content Include="public\css\offers.css" />
     <Content Include="public\css\style.css" />
     <Content Include="public\css\TC.css" />
     <Content Include="public\js\index.js" />
+    <Content Include="public\js\Offers.js" />
     <Content Include="public\js\TC.js" />
     <Content Include="TC.aspx" />
     <Content Include="user\Dashboard.aspx" />
@@ -228,6 +239,13 @@
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="dbconfig\dbConfg.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -236,6 +254,21 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="homeitems\Bid.aspx.cs">
+      <DependentUpon>Bid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homeitems\Bid.aspx.designer.cs">
+      <DependentUpon>Bid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homeitems\Offers.aspx.cs">
+      <DependentUpon>Offers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homeitems\Offers.aspx.designer.cs">
+      <DependentUpon>Offers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="model\Order.cs" />
     <Compile Include="model\Product.cs" />
     <Compile Include="model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -291,9 +324,7 @@
   <ItemGroup>
     <Analyzer Include="..\packages\AWSSDK.SecurityToken.3.7.100.14\analyzers\dotnet\cs\AWSSDK.SecurityToken.CodeAnalysis.dll" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="public\assets\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
