@@ -76,7 +76,7 @@
                         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                         <ul class="right hide-on-med-and-down">
                             <li><a href="./CRUD.aspx">Manage</a></li>&nbsp;&nbsp;&nbsp;
-                            <li><a href="./MyOrders.aspx">MyOrders</a></li>
+                            <li><a href="./MyOrders.aspx">Cart</a></li>
                             <li><a href="./OrderGot.aspx">MyOrders</a></li>
                             <li>
                                 <form runat="server" >
