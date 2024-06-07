@@ -10,8 +10,25 @@
     <title>Fody Slider</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link href="../public/css/offers.css" rel="stylesheet" />
+    <style>
+        .swiper-slide .tranding-slide-content {
+    display: none;
+    position: absolute; /* Positioning it absolutely within the swiper-slide */
+    top: 50%; /* Adjust according to your layout */
+    left: 50%; /* Adjust according to your layout */
+    transform: translate(-50%, -50%); /* Center the content */
+    background: rgba(255, 255, 255, 0.8); /* Optional: Adds a background for better visibility */
+    padding: 150px; /* Optional: Adds padding around the content */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
 
+.swiper-slide:hover .tranding-slide-content {
+    display: block;
+}
+
+    </style>
 </head>
+
 <body>
     <section id="tranding">
         <div class="container">
@@ -29,10 +46,13 @@
                         <div class="tranding-slide-img">
                             <img src="<%= item.ImageUrl %>" alt="Trending">
                         </div>
-                        <div class="tranding-slide-content">
+                     
+                        <div class="tranding-slide-content" >
+                            <div class="price">
                             <h1 class="product-price">₹<%= item.Price %></h1>
-                            <div class="tranding-slide-content-bottom">
-                                <h2 class="food-name" style="color:black"><%= item.Name %></h2>
+                                </div><br /><br />
+                            <div class="tranding-slide-content-bottom" style="gap:16;">
+                                <h2 class="food-name" style="color: black"><%= item.Name %></h2>
                             </div>
                         </div>
                     </div>
