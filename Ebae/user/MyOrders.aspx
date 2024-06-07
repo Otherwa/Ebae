@@ -10,21 +10,21 @@
 <body>
     <form id="form1" runat="server">
         <div class="container mx-auto mt-10">
-            <asp:Gridview ID="OrdersRepeater" runat="server">
-                <ItemTemplate>
-                    <div class="max-w-sm rounded overflow-hidden shadow-lg my-4">
-                        <img class="w-full" src='<%# Eval("image") %>' alt='<%# Eval("name") %>'>
-                        <div class="px-6 py-4">
-                            <div class="font-bold text-xl mb-2"><%# Eval("name") %></div>
-                            <p class="text-gray-700 text-base"><%# Eval("description") %></p>
-                            <p class="text-gray-700 text-base">Price: $<%# Eval("price") %></p>
-                            <p class="text-gray-700 text-base">Quantity: <%# Eval("quantity") %></p>
-                            <p class="text-gray-700 text-base">Order ID: <%# Eval("orderid") %></p>
-                            <p class="text-gray-700 text-base">Address: <%# Eval("address") %></p>
-                        </div>
-                    </div>
-                </ItemTemplate>
-            </asp:Gridview>
+            
+            <asp:GridView ID="OrdersRepeater" runat="server" AutoGenerateColumns="False" >
+                <Columns>
+                    <asp:BoundField DataField="name" HeaderText="name" />
+                    <asp:BoundField DataField="description" HeaderText="Name" />
+                    <asp:BoundField DataField="price" HeaderText="price" />
+                    <asp:BoundField DataField="quantity" HeaderText="quantity" />
+                     <asp:BoundField DataField="orderId" HeaderText="Order ID" />
+                    <asp:BoundField DataField="address" HeaderText="Address" />
+                   
+
+                 
+                </Columns>
+
+            </asp:GridView>
         </div>
     </form>
 </body>

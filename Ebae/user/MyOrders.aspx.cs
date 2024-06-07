@@ -16,7 +16,7 @@ namespace Ebae
 
                 User user = (User)Session["user"];
                 int userId = user.Uid;
-                BindOrders(2);
+                BindOrders(userId);
             }
         }
 

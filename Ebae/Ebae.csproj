@@ -205,6 +205,9 @@
     <Content Include="About.aspx" />
     <Content Include="Checkout.aspx" />
     <Content Include="dbconfig\Ebae.mdf" />
+    <Content Include="dbconfig\Ebae_log.ldf">
+      <DependentUpon>Ebae.mdf</DependentUpon>
+    </Content>
     <Content Include="Default.aspx" />
     <Content Include="homeitems\Bid.aspx" />
     <Content Include="homeitems\Offers.aspx" />
