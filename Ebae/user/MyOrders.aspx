@@ -11,20 +11,25 @@
     <form id="form1" runat="server">
         <div class="container mx-auto mt-10">
             
-            <asp:GridView ID="OrdersRepeater" runat="server" AutoGenerateColumns="False" >
+            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="orderId" DataSourceID="SqlDataSource1" >
                 <Columns>
-                    <asp:BoundField DataField="name" HeaderText="name" />
-                    <asp:BoundField DataField="description" HeaderText="Name" />
-                    <asp:BoundField DataField="price" HeaderText="price" />
-                    <asp:BoundField DataField="quantity" HeaderText="quantity" />
-                     <asp:BoundField DataField="orderId" HeaderText="Order ID" />
-                    <asp:BoundField DataField="address" HeaderText="Address" />
-                   
-
-                 
+                    <asp:CommandField ShowSelectButton="True" />
+                    <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
+                    <asp:BoundField DataField="description" HeaderText="description" SortExpression="description" />
+                    <asp:BoundField DataField="image" HeaderText="image" SortExpression="image" />
+                    <asp:BoundField DataField="price" HeaderText="price" SortExpression="price" />
+                    <asp:BoundField DataField="orderId" HeaderText="orderId" InsertVisible="False" ReadOnly="True" SortExpression="orderId" />
+                    <asp:BoundField DataField="quantity" HeaderText="quantity" SortExpression="quantity" />
+                    <asp:BoundField DataField="address" HeaderText="address" SortExpression="address" />
                 </Columns>
-
             </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SqlServer %>" SelectCommand="SELECT p.name, p.description, p.image, o.price, o.orderId, o.quantity, o.address 
+               FROM [Products] p INNER JOIN [Order] o ON p.product_id = o.productId 
+              WHERE o.userId = @userId;">
+                <SelectParameters>
+                    <asp:CookieParameter CookieName="userId" DefaultValue="2" Name="userId" />
+                </SelectParameters>
+            </asp:SqlDataSource>
         </div>
     </form>
 </body>

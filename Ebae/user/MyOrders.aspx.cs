@@ -10,14 +10,13 @@ namespace Ebae
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
+          
 
 
                 User user = (User)Session["user"];
-                int userId = user.Uid;
+                int userId =Convert.ToInt32(GetCookieValue("userId"));
                 BindOrders(userId);
-            }
+            
         }
 
         private void BindOrders(int userId)
@@ -26,10 +25,13 @@ namespace Ebae
             OrderDetails orderDetails = new OrderDetails(); // Instantiate the Order class
             List<OrderDetails> orders = orderDetails.MyOrders(userId);
 
-            OrdersRepeater.DataSource = orders;
-            OrdersRepeater.DataBind();
+          
         }
-      
+        private string GetCookieValue(string cookieName)
+        {
+            HttpCookie cookie = Request.Cookies[cookieName];
+            return cookie != null ? cookie.Value : null;
+        }
 
     }
 }
