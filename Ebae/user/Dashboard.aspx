@@ -77,6 +77,7 @@
                         <ul class="right hide-on-med-and-down">
                             <li><a href="./CRUD.aspx">Manage</a></li>&nbsp;&nbsp;&nbsp;
                             <li><a href="./MyOrders.aspx">MyOrders</a></li>
+                            <li><a href="./OrderGot.aspx">MyOrders</a></li>
                             <li>
                                 <form runat="server" >
                                     <asp:Button CssClass="waves-effect waves-teal btn-flat" ID="Button1" runat="server" Text="Logout" ForeColor="Black" OnClick="Logout" />

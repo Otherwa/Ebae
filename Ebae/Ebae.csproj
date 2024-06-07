@@ -213,6 +213,7 @@
     <Content Include="homeitems\Offers.aspx" />
     <Content Include="materialize\css\materialize.css" />
     <Content Include="materialize\css\materialize.min.css" />
+    <Content Include="user\OrderGot.aspx" />
     <Content Include="user\MyOrders.aspx" />
     <Content Include="public\assets\air-jordan-7-retro-black-gloss-release-date.jpg" />
     <Content Include="public\assets\Alia.png" />
@@ -276,6 +277,13 @@
     <Compile Include="model\Order.cs" />
     <Compile Include="model\Product.cs" />
     <Compile Include="model\User.cs" />
+    <Compile Include="user\OrderGot.aspx.cs">
+      <DependentUpon>OrderGot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\OrderGot.aspx.designer.cs">
+      <DependentUpon>OrderGot.aspx</DependentUpon>
+    </Compile>
     <Compile Include="user\MyOrders.aspx.cs">
       <DependentUpon>MyOrders.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
