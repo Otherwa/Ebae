@@ -1,5 +1,7 @@
 ﻿using Ebae.dbconfig;
+using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.EnterpriseServices.Internal;
 
 namespace Ebae.model
 {
@@ -13,6 +15,7 @@ namespace Ebae.model
         public bool Availability { get; set; }
         public string Image { get; set; }
 
+      
         public static Product GetProductById(int productId)
         {
             Product product = null;
@@ -48,4 +51,6 @@ namespace Ebae.model
             return product;
         }
     }
+
+    
 }
