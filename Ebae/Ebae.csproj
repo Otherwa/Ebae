@@ -49,8 +49,9 @@
     <Reference Include="AWSSDK.SecurityToken, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
       <HintPath>..\packages\AWSSDK.SecurityToken.3.7.100.14\lib\net45\AWSSDK.SecurityToken.dll</HintPath>
     </Reference>
-    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
-      <HintPath>..\packages\BouncyCastle.Cryptography.2.2.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938">
+      <HintPath>..\packages/BouncyCastle.Cryptography.2.3.1/lib/net461/BouncyCastle.Cryptography.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="DnsClient, Version=1.6.1.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
       <HintPath>..\packages\DnsClient.1.6.1\lib\net471\DnsClient.dll</HintPath>
@@ -204,11 +205,16 @@
     <Content Include="About.aspx" />
     <Content Include="Checkout.aspx" />
     <Content Include="dbconfig\Ebae.mdf" />
+    <Content Include="dbconfig\Ebae_log.ldf">
+      <DependentUpon>Ebae.mdf</DependentUpon>
+    </Content>
     <Content Include="Default.aspx" />
     <Content Include="homeitems\Bid.aspx" />
     <Content Include="homeitems\Offers.aspx" />
     <Content Include="materialize\css\materialize.css" />
     <Content Include="materialize\css\materialize.min.css" />
+    <Content Include="user\OrderGot.aspx" />
+    <Content Include="user\MyOrders.aspx" />
     <Content Include="public\assets\air-jordan-7-retro-black-gloss-release-date.jpg" />
     <Content Include="public\assets\Alia.png" />
     <Content Include="public\css\bid.css" />
@@ -271,6 +277,20 @@
     <Compile Include="model\Order.cs" />
     <Compile Include="model\Product.cs" />
     <Compile Include="model\User.cs" />
+    <Compile Include="user\OrderGot.aspx.cs">
+      <DependentUpon>OrderGot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\OrderGot.aspx.designer.cs">
+      <DependentUpon>OrderGot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\MyOrders.aspx.cs">
+      <DependentUpon>MyOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\MyOrders.aspx.designer.cs">
+      <DependentUpon>MyOrders.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TC.aspx.cs">
       <DependentUpon>TC.aspx</DependentUpon>

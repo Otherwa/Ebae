@@ -68,20 +68,20 @@
 
     <div class="body-wrapper-content">
         <!--NavBar-->
-        <nav class="nav">
+        <nav class="nav" style="width:100%">
             <div class="nav-wrapper">
                 <nav class="pink lighten-5 nav">
                     <div class="nav-wrapper">
                         <a href="/" class="brand-logo myFont" style="padding-left: 1.25rem;">Ebaeee</a>
                         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                         <ul class="right hide-on-med-and-down">
-                            <li><a href="./CRUD.aspx">Manage</a></li>
+                            <li><a href="./CRUD.aspx">Manage</a></li>&nbsp;&nbsp;&nbsp;
+                            <li><a href="./MyOrders.aspx">Cart</a></li>
+                            <li><a href="./OrderGot.aspx">MyOrders</a></li>
                             <li>
                                 <form runat="server" >
                                     <asp:Button CssClass="waves-effect waves-teal btn-flat" ID="Button1" runat="server" Text="Logout" ForeColor="Black" OnClick="Logout" />
-                               
-                               
-
+                                                           
                             </li>
                         </ul>
                         <ul class="side-nav" id="mobile-demo">
